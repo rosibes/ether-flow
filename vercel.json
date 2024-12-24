@@ -3,8 +3,7 @@
     "builds": [
       {
         "src": "client/package.json",
-        "use": "@vercel/node",
-        "config": { "zero-config": true }
+        "use": "@vercel/react"
       }
     ],
     "outputDirectory": "client/build"
