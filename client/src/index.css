@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    overflow-x: visible; /* Ascunde overflow-ul orizontal */
-    background-color: #0f172a; /* Fundalul devine negru */
-    color: white; /* Text alb pentru contrast */
-  }
+  overflow-x: visible; /* Ascunde overflow-ul orizontal */
+  background-color: #0f172a; /* Fundalul devine negru */
+  color: white; /* Text alb pentru contrast */
+}
