@@ -54,7 +54,17 @@ function App() {
           <ContractActions />
         </div>
       )}
+      <div className="w-full py-7 mt-4 text-sm border-t absolute bottom-0">
+      <footer className=" text-gray-100  py-4 text-sm  absolute bottom-0 ml-10">
+      Developed by <a
+            href="https://x.com/rosibes27"
+            target="_blank"
+            rel="noopener noreferrer" className="text-gray-100 text-lg">rosibes</a>
+        </footer>
+      </div>
+      
     </div>
+
   );
 }
 

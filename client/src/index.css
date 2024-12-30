@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    overflow-x: visible; /* Ascunde overflow-ul orizontal */
+    background-color: #0f172a; /* Fundalul devine negru */
+    color: white; /* Text alb pentru contrast */
+  }
