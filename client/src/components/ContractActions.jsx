@@ -45,9 +45,9 @@ function ContractActions() {
 
   return (
     <div className="bg-slate-900 text-white flex flex-col items-center p-4">
-      <div className="flex justify-center gap-4 w-full max-w-lg mb-6">
+      <div className="flex justify-center gap-2 sm:gap-4 w-full max-w-lg mb-6">
         <button
-          className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-semibold text-xl hover:bg-blue-900 transition duration-300"
+          className="bg-blue-600 text-white text-sm sm:text-xl px-6 sm:px-10 py-3 sm:py-4  rounded-2xl font-semibold text-xl hover:bg-blue-900 transition duration-300"
           onClick={() => {
             setShowTransferSection(true);
             setShowDepositSection(false);
@@ -56,7 +56,7 @@ function ContractActions() {
           Transfer Funds
         </button>
         <button
-          className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-semibold text-xl hover:bg-blue-900 transition duration-300"
+          className="bg-blue-600 text-white text-sm sm:text-xl px-6 sm:px-10 py-3 sm:py-4  rounded-2xl font-semibold text-xl hover:bg-blue-900 transition duration-300"
           onClick={() => {
             setShowDepositSection(true);
             setShowTransferSection(false);
@@ -68,21 +68,21 @@ function ContractActions() {
 
       {/* Transfer Section */}
       {showTransferSection && (
-        <div className="flex flex-col justify-center items-center w-full max-w-lg rounded-lg shadow-lg p-6 mb-6 bg-slate-800">
-          <input
+        <div className="flex flex-col justify-center items-center w-full max-w-md sm:max-w-lg rounded-lg shadow-lg p-4 sm:p-6 mb-6 bg-slate-800">
+        <input
             type="text"
             value={recipient}
             onChange={(e) => setRecipient(e.target.value)}
             placeholder="Recipient Address"
-            className="w-full max-w-md px-4 py-2 border rounded-lg text-gray-800 mb-4"
-          />
+            className="w-full px-3 py-2 sm:px-4 sm:py-2 border rounded-lg text-gray-800 mb-4"
+            />
           <input
             type="text"
             value={transferValue}
             onChange={(e) => setTransferValue(e.target.value)}
             placeholder="Amount in ETH"
-            className="w-full max-w-md px-4 py-2 border rounded-lg text-gray-800 mb-4"
-          />
+            className="w-full px-3 py-2 sm:px-4 sm:py-2 border rounded-lg text-gray-800 mb-4"
+            />
           <button
             className="bg-green-600 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-green-900 transition duration-300"
             onClick={handleTransfer}
@@ -94,14 +94,14 @@ function ContractActions() {
 
       {/* Deposit Section */}
       {showDepositSection && (
-        <div className="flex flex-col justify-center items-center w-full max-w-lg rounded-lg shadow-lg p-6 mb-6 bg-slate-800">
-          <input
+        <div className="flex flex-col justify-center items-center w-full max-w-md sm:max-w-lg rounded-lg shadow-lg p-4 sm:p-6 mb-6 bg-slate-800">
+        <input
             type="text"
             value={depositValue}
             onChange={(e) => setDepositValue(e.target.value)}
             placeholder="Amount in ETH"
-            className="w-full max-w-md px-4 py-2 border rounded-lg text-gray-800 mb-4"
-          />
+            className="w-full px-3 py-2 sm:px-4 sm:py-2 border rounded-lg text-gray-800 mb-4"
+            />
           <button
             className="bg-green-600 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:bg-green-900 transition duration-300"
             onClick={handleDeposit}

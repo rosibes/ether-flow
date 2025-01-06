@@ -29,16 +29,16 @@ function ContractInfo({ account, handleLogout }) {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto p-4">
       {/* Caseta cu EtherFlow și Logout */}
-      <div className="w-full bg-slate-800 rounded-xl px-8 py-4 flex justify-between items-center mb-4">
-        <div className="flex justify-row items-center">
+      <div className="bg-slate-800 rounded-xl px-4 py-4 flex flex-col sm:flex-row justify-between items-center mb-4 w-full max-w-[250px] sm:max-w-[500px] mx-auto">
+      <div className="flex items-center space-x-2">
       <FaEthereum className="text-white w-10 h-10" />
-        <p className="text-white text-2xl font-semibold">EtherFlow</p>
+        <p className="text-white text-xl sm:text-2xl font-semibold">EtherFlow</p>
         </div>
         <button
           onClick={handleLogout}
-          className="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-md"
+          className="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-md mt-2 sm:mt-0"
         >
           Logout
         </button>
@@ -46,13 +46,13 @@ function ContractInfo({ account, handleLogout }) {
 
          {/* Afișează prețul Ethereum */}
          <div className="flex justify-center mb-3">
-         <div className="text-white text-lg mt-4">
+         <div className="text-white text-center text-base sm:text-2xl mt-4">
           {loading ? (
             <p>Loading ETH price...</p>
           ) : error ? (
             <p>{error}</p>
           ) : (
-            <p className="text-white text-2xl font-semibold">Current ETH Price: ${price}</p>
+            <p className="text-white text-xl sm:text-3xl font-semibold">Current ETH Price: ${price}</p>
           )}
         </div>
         </div>
@@ -61,13 +61,13 @@ function ContractInfo({ account, handleLogout }) {
       <div className="w-full text-center mb-10 px-20">
         <div className="flex justify-center items-center space-x-2 mb-2">
           
-          <h2 className="text-white text-7xl font-semibold">{balance} ETH</h2>
+          <h2 className="text-white text-4xl sm:text-7xl font-semibold">{balance} ETH</h2>
           {/* Aici este logo-ul ETH din react-icons */}
           <FaEthereum className="text-white w-10 h-10" />
         </div>
     {/* Adresa contractului și logo-ul de copiere */}
         <div className="flex justify-center items-center space-x-2">
-          <p className="text-white">{account}</p>
+          <p className="text-white text-md sm:text-lg">{account}</p>
      {/* Logo-ul de copiere */}
      <CopyToClipboard text={account} onCopy={handleCopy}>
             <button className="text-white">
